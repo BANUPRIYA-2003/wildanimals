@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<style>
+		.container
+		{
+			height: 800px;
+			width: 100%;
+			border: 1px solid black;
+			background-color: black;
+		}
+		.child 
+		{
+			height: 92%;
+			width: 85%;
+			background-color:rgba(255, 255, 255, 0.2);
+			backdrop-filter: blur(12px);
+			border-radius: 30px;
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+			margin-left: 100px;
+			margin-top: 50px;
+		}
+		.child:hover
+		{
+			box-shadow: 0 5px 50px 0 #F5F5F5 inset, 0 5px 50px 0 #F5F5F5;
+		}
+		.section-sub
+		{
+			font-size: 1.5rem;
+			font-weight: 600;
+			letter-spacing: 1px;
+			color: #00ff26;
+			text-transform: capitalize;
+			animation: bottomIn 1s ease-in-out forwards;
+			animation-delay: 0.2s;
+			opacity: 0;
+		}
+		.section-title
+		{
+			font-size: 4rem;
+			font-weight:800;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+/*			margin-bottom: 20px;*/
+			animation: bottomIn 1s ease-in-out forwards;
+			animation-delay: 0.3s;
+			opacity: 0;
+		}
+
+		#join-us .content-wrap-2
+		{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+		}
+		.join-form 
+		{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+			margin-top: 30px;
+		}
+		.i1:hover
+		{
+			box-shadow: 0 5px 50px 0 #00ff26 inset, 0 5px 50px 0 #00ff26;
+			text-shadow: 0 0 5px #00ff26, 0 0 50px 0 #00ff26;
+		}
+		.i2:hover
+		{
+			box-shadow: 0 5px 50px 0 #00ff26 inset, 0 5px 50px 0 #00ff26;
+			text-shadow: 0 0 5px #00ff26, 0 0 50px 0 #00ff26;
+		}
+		.i3:hover
+		{
+			box-shadow: 0 5px 50px 0 #00ff26 inset, 0 5px 50px 0 #00ff26;
+			text-shadow: 0 0 5px #00ff26, 0 0 50px 0 #00ff26;
+		}
+		.i4:hover
+		{
+			box-shadow: 0 5px 50px 0 #00ff26 inset, 0 5px 50px 0 #00ff26;
+			text-shadow: 0 0 5px #00ff26, 0 0 50px 0 #00ff26;
+		}
+		.input-1
+		{
+			font-size: 18px;
+			letter-spacing: 1px;
+			color: black;
+			background-color: white;
+			border: 1px solid white;
+			height: 45px;
+			width: 600px;
+			border-radius: 50px;
+			padding: 0 30px;
+			text-transform: capitalize;
+		}
+		.input-1::placeholder
+		{
+			color: black;
+		}
+		#join-us p 
+		{
+			font-size: 18px;
+			letter-spacing: 1px;
+			animation: bottomIn 1s ease-in-out forwards;
+			opacity: 0;
+			animation-delay: 0.55s;
+		}
+		.checkbox-wrap
+		{
+			display: flex;
+			justify-content: center;
+			gap: 30px;
+			font-size: 18px;
+			animation: bottomIn 1s ease-in-out forwards;
+			animation-delay: 0.65s;
+			opacity: 0;
+		}
+		.join-btn 
+		{
+			background-color: #00ff26;
+			font-size: 18px;
+			font-weight: 600px;
+			letter-spacing: 1px;
+			text-transform: capitalize;
+			height: 45px;
+			width: 300px;
+			color: rgb(0, 0, 0 / 0.8);
+			border-radius: 50px;
+			border: 1px solid #00ff26;
+			cursor: pointer;
+			transition: 0.3s;
+			animation: bottomIn 1s ease-in-out forwards;
+			animation-delay: 0.5s;
+			opacity: 0;
+		}
+		.join-btn:hover
+		{
+			box-shadow: 0 5px 50px 0 #00ff26 inset, 0 5px 50px 0 #00ff26;
+			text-shadow: 0 0 5px #00ff26, 0 0 50px 0 #00ff26;
+		}
+		.i1, .i2, .i3, .i4
+		{
+			animation: bottomIn 1s ease-in-out forwards;
+			opacity: 0;
+		}
+		.i1 
+		{
+			animation-delay: 0.4s;
+		}
+		.i2 
+		{
+			animation-delay: 0.55s;
+		}
+		.i3 
+		{
+			animation-delay: 0.6s;
+		}
+		.i4 
+		{
+			animation-delay: 0.65s;
+		}
+		@keyframes bottomIn{
+			from 
+			{
+				transform: translateY(500px);
+			}
+			
+			to 
+			{
+				transform: translateY(0);
+				opacity: 1;
+			}
+			}
+
+			@keyframes ZoomIn{
+			from 
+			{
+				transform: scale(0);
+			}
+			from 
+			{
+				transform: scale(1);
+				opacity: 1;
+			}
+
+			
+		} 
+		@media(max-width:991px)
+		{
+			.container
+			{
+				width:900px;
+			}
+			.child
+			{
+				width: 80%;
+				margin-left: 100px;
+			}
+			.section-title
+			{
+				font-size: 40px;
+				color: white;
+			}
+			.section-sub
+			{
+				font-size: 45px;
+			}
+			.checkbox-wrap
+			{
+				color: white;
+			}
+			#join-us p 
+			{
+				color: white;
+			}
+		} 
+
+	</style>
+	<section id="join-us">
+		<div class="container">
+			<div class="child">
+				<div class="section-box">
+			<div class="content-wrap-2">
+				<h3 class="section-sub">join with us</h3>
+				<h2 class="section-title">save wildlife, protect Nature</h2>
+				<div class="join-form">
+					<input type="text" class="input-1 i1" placeholder="Your Name">
+					<input type="text" class="input-1 i2" placeholder="Your Email">
+					<input type="text" class="input-1 i3" placeholder="Your Number">
+					<input type="text" class="input-1 i4" placeholder="Your Address">
+					<p>Membership</p>
+					<div class="checkbox-wrap">
+						
+						<label><input type="checkbox"> Individual</label>
+						<label><input type="checkbox"> Family</label>
+						<label><input type="checkbox"> Corporate</label>
+					</div>
+					<button class="join-btn">Be a member</button>
+				</div>
+			</div>
+		</div>
+			</div>
+		</div>
+		
+	</section>
+
+</body>
+</html>
